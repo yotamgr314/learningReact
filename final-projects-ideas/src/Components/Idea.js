@@ -21,8 +21,8 @@ class Idea extends Component { // NOTE: inherits from the basic React Component 
 
     // STATE MANAGEMENT
     edit() {
-        this.setState({ // NOTE : a react function which allows us to change the state of a component.  NOTE: WE WILL USE this syntax:  this.setState((prevState, props) => {
-            //                                                                                                                          return {counter: prevState.counter + props.step};})
+        this.setState({ // NOTE : a react function which allows us to change the state of a component.  NOTE: WE WILL USE this syntax instead of this.state:  this.setState((prevState, props) => {
+            //                                                                                                                          return {counter: prevState.counter + props.step};})  FOR ASYNCHORICT REASONS - THAT WAY IT IS PROMISED TO US THAT prevState is always updated.
             editing: true
         });
     }
