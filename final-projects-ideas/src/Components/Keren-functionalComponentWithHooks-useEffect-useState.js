@@ -18,8 +18,9 @@ const [ideas, setIdeas] = useState([]);     // NOTE: Using useState to manage th
 
     // USEEFFECT SECTION
     useEffect(() => {
-        fetchIdeasData();
-    }, []);    // NOTE: Using useEffect to call the fetchIdeasData function when the component is first rendered.
+        fetchIdeasData(); // NOTE HERE LIES THE CODE WE WANT TO RUN, IT NO EVENT IS SPECIFIED IN THE DEPENDENCY ARRAY IT WILL RUN AT LEAST ONCE - ONCE WHEN THE COMPONENT MOUNTS.
+    }, []);    // NOTE: THE DEPENDECY ARRAY - WHICH EVENT IT LISTENS TO. 
+               //NOTE: Using useEffect to call the fetchIdeasData function when the component is first rendered.
                 // The empty dependency array [] ensures it only runs once on mount.
 
 
